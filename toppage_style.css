@@ -7,6 +7,7 @@ body {
     font-size: 14px;
     margin: 0;
     width: 100%;
+    background: rgb(239, 241, 243);
 }
 
 .header {
@@ -37,7 +38,9 @@ body {
 
 main {
     background: rgb(239, 241, 243);
+    padding-top: 10px;
     padding-bottom: 10px;
+    width: 100%;
 }
 
 .main_img {
@@ -319,7 +322,7 @@ dt::after {
 }
 
 .footer_bottom a {
-    display: box;
+    display: block;
     color: white;
     text-decoration: none;
     font-size: 12px;
@@ -358,15 +361,50 @@ dt::after {
     margin-left: 5px;
 }
 
-
 #pc-menu {
     /* display: none; */
 }
 
-@media (min-width: 600px) {
-
+.main_img_wide {
+    display: none;
 }
 
+@media (min-width: 600px) {
+    .main_img {
+        display: none;
+    }
+
+    .main_img_wide {
+        display: block;
+    }
+
+    .main_img_wide > img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    } 
+
+    .sec1, .sec2, .sec3, .sec4 {
+        display: flex;
+        justify-content: space-around;
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .sec1, .sec2, .sec3, .sec4 > div {
+        align-items: center;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .sec4 div {
+        margin-top: 120px;
+    }
+
+    .sec2, .sec4 {
+        flex-direction: row-reverse;
+    }
+}
 
 
 @media (min-width: 1124px) {
@@ -406,4 +444,5 @@ dt::after {
     #pc-menu-item4 a:hover, #pc-menu-item5 a:hover {
         border: solid 1px white;
     } 
+
 }
