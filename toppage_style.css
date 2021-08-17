@@ -264,6 +264,7 @@ main {
 
 .footer_menu > div {
     padding-top: 5px;
+    padding-bottom: 10px;
     border-top: solid 1px rgb(180, 152, 74);
 }
 
@@ -340,9 +341,8 @@ dt::after {
     transition: margin-bottom .2s ease-out;
 }
 
-
 .navitem1, .navitem2 {
-    display: box;
+    display: block;
     color: white;
     text-decoration: none;
     text-align: center;
