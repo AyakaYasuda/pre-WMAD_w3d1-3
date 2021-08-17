@@ -10,7 +10,7 @@ body {
 }
 
 .header {
-    background-color: rgba(5, 5, 5, 0.8);
+    background-color: #262626;
     position: sticky;
     top: 0;
     max-width: 100%;
@@ -21,6 +21,10 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 18px;
+}
+
+.container #name {
+    letter-spacing: .1em;
 }
 
 .header a {
@@ -69,7 +73,7 @@ main {
 
 .sec1 p {
     text-align: center;
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .button1 {
@@ -107,7 +111,7 @@ main {
 
 .sec2 p {
     text-align: center;
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .button2 {
@@ -145,7 +149,7 @@ main {
 
 .sec3 p {
     text-align: center;
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .button3 {
@@ -177,11 +181,12 @@ main {
 
 .sec4 p {
     text-align: center;
-    font-size: 14px;
+    font-size: 11px;
 }
 
 .sec4 small {
     display: block;
+    font-size: 9px;
     text-align: center;
     margin: 8px 0px 14px;
 }
@@ -200,9 +205,169 @@ main {
     color: black;
 }
 
+.guideline {
+    background: white;
+    padding: 20px;
+}
+
+.guideline h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.guideline p {
+    font-size: 10px;
+    text-align: center;
+}
+
+.guideline a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    color: rgb(180, 152, 74);
+}
+
+.footer {
+    background: #262626;
+    text-align: center;
+}
+
+.footer .fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(180, 152, 74);
+}
+
+.footer .fa:hover {
+    color: white;
+}
+
+.footer {
+    color: white;
+    padding: 30px 30px 105px;
+}
+
+
+/* footer accordion */
+.footer_menu {
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+.footer_menu > div {
+    padding-top: 5px;
+    border-top: solid 1px rgb(180, 152, 74);
+}
+
+.footer_menu > #accessibility {
+    border-bottom: solid 1px rgb(180, 152, 74);
+}
+
+dt {
+    margin-top: 20px;
+    font-size: 14px;
+    height: 40px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+dd {
+    display: none;
+    margin: 0 auto;
+    font-size: 12px;
+}
+
+dt::after {
+    content: " ▼ ";
+    position: absolute;
+    right: 15px;
+    transition: transform 0.3;
+}
+
+.footer_menu div.appear dt::after {
+    transform: rotate(180deg);
+}
+
+.footer_menu div.appear dd {
+    display: block;
+    animation: 0.3s fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 0;
+}
+
+.footer_bottom a {
+    display: box;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer_nav {
+    width: 92%;
+    margin-left: auto;
+    display: flex;
+    justify-content: stretch;
+    position: fixed;
+    bottom: 0;
+    left: 4%;
+    margin-bottom: 10px;
+    transition: margin-bottom .2s ease-out;
+}
+
+
+.navitem1, .navitem2 {
+    display: box;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 13px 10px;
+    line-height: 14px;
+    border: solid 1px rgb(180, 152, 74);
+    width: 100%;
+    background: #262626;
+}
+
+.navitem1 {
+    margin-right: 5px;
+}
+
+.navitem2 {
+    margin-left: 5px;
+}
+
+
 #pc-menu {
     /* display: none; */
 }
+
+@media (min-width: 600px) {
+
+}
+
+
 
 @media (min-width: 1124px) {
     #pc-menu {
