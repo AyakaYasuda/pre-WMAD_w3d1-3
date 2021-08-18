@@ -17,17 +17,6 @@ body {
     max-width: 100%;
 }
 
-.container {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 18px;
-}
-
-.container #name {
-    letter-spacing: .1em;
-}
-
 .header a {
     font-size: 20px;
     color: white;
@@ -35,6 +24,86 @@ body {
     padding: 14px;
     line-height: 14px;
 }
+
+.container_mobile > div {
+    max-width: 100%;
+    display: flex;
+    justify-content: stretch;
+    padding: 18px;
+}
+
+.container_mobile #name {
+    letter-spacing: .1em;
+}
+
+.mobile_menu {
+    margin-left: auto;
+}
+
+.mobile_menu #open {
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #262626;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay #open.hide {
+    opacity: 0;
+}
+
+.overlay > div {
+    max-width: 100%;
+    display: flex;
+    justify-content: stretch;
+    padding: 18px;
+}
+
+.overlay #name {
+    letter-spacing: .1em;
+}
+
+.overlay ul {
+    display: block;
+}
+
+.overlay li {
+    list-style-type: none;
+    padding: 12px 0;
+}
+
+.overlay a {
+    padding: 0;
+}
+
+.overlay #close {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+/* main section */
 
 main {
     background: rgb(239, 241, 243);
@@ -361,13 +430,15 @@ dt::after {
     margin-left: 5px;
 }
 
-#pc-menu {
-    /* display: none; */
+.container {
+    display: none;
 }
 
 .main_img_wide {
     display: none;
 }
+
+/* ================================== */
 
 @media (min-width: 600px) {
     .main_img {
@@ -406,10 +477,31 @@ dt::after {
     }
 }
 
+/* ==================================== */
 
 @media (min-width: 1124px) {
+    .container {
+        max-width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 18px;
+    }
+    
+    .container #name {
+        letter-spacing: .1em;
+    }
+
+    .container_mobile {
+        display: none;
+    }
+
+    .overlay {
+        display: none;
+    }
+
     #pc-menu {
         margin-left: auto;
+        display: block;
     }
 
     #pc-menu ul {
